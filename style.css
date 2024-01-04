@@ -45,6 +45,39 @@ body {
     cursor: pointer;
 }
 
+.video-block {
+    position: relative;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.video-block video {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+}
+
+/* Hide default video controls */
+.video-block video::-webkit-media-controls {
+    display:none !important;
+}
+
+.video-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.video-text p {
+    margin: 0;
+    font-size: 54px; /* Adjust the font size as needed */
+    font-weight: bold;
+}
+
+
 .image-block {
     text-align: center;
     margin-top: 40px;
@@ -121,6 +154,76 @@ body {
 * {
     box-sizing: border-box;
 }
+
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.timeline {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 50px auto; /* Center the timeline */
+}
+
+dl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 16%;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px; /* Rounded corners */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+dd {
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    position: relative;
+    z-index: 0;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+p {
+    margin: 0;
+}
+
+strong {
+    color: #2b0140; /* Dark purple */
+}
+
+.dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #2b0140; /* Dark purple */
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+dl:hover {
+    background-color: #f0f0f0; /* Light gray */
+}
+
+dl:hover dd {
+    background-color: #f0f0f0; /* Light gray */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+
+
 
 /* footer section */
 
