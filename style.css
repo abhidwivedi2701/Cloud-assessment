@@ -51,16 +51,24 @@ body {
     margin-top: 40px;
 }
 
+.video-block {
+    width: 100%;
+    max-width: 2000px; /* Set a maximum width if needed */
+    height: 500px; /* Set the desired height */
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
 .video-block video {
     width: 100%;
     height: auto;
-    border-radius: 5px;
     display: block;
 }
 
 /* Hide default video controls */
 .video-block video::-webkit-media-controls {
-    display:none !important;
+    display: none !important;
 }
 
 .video-text {
@@ -76,6 +84,7 @@ body {
     font-size: 54px; /* Adjust the font size as needed */
     font-weight: bold;
 }
+
 
 
 .image-block {
@@ -156,72 +165,73 @@ body {
 }
 
 
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
+.heading {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top:120px;
+    /* background-color: #fff; Added background color for distinction */
+    border-radius: 8px; /* Rounded corners for the heading */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    
+    
+}
+ 
+.heading h1 {
+    color: #ffffff;
+    font-size: 32px; /* Increased font size for emphasis */
+    padding: 10px 20px; /* Padding around the heading text */
+    
+    display: inline-block; /* Allows border to fit the content width */
 }
 
 .timeline {
-    width: 80%;
     display: flex;
     justify-content: space-between;
-    position: relative;
-    margin: 50px auto; /* Center the timeline */
 }
 
-dl {
+.timeline {
+    width: 90%;
+    margin: 50px auto;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 16%;
-    position: relative;
-    cursor: pointer;
-    border-radius: 10px; /* Rounded corners */
-    transition: background-color 0.3s, box-shadow 0.3s;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-
-dd {
-    width: 100%;
+ 
+/* Style for each timeline block */
+.timeline-block {
+    width: calc(30% - 20px);
+    margin-bottom: 40px;
     background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 10px;
-    position: relative;
-    z-index: 0;
-    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
 }
-
-p {
-    margin: 0;
+ 
+/* Style for the content within each timeline block */
+.timeline-content {
+    text-align: center;
 }
-
-strong {
-    color: #2b0140; /* Dark purple */
-}
-
-.dot {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: #2b0140; /* Dark purple */
-    border-radius: 50%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-}
-
-dl:hover {
-    background-color: #f0f0f0; /* Light gray */
-}
-
-dl:hover dd {
-    background-color: #f0f0f0; /* Light gray */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ 
+/* Hover effect for each timeline block */
+.timeline-block:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
-
+ 
+/* Style for the strong element */
+.timeline-content strong {
+    color: #2b0140;
+    display: block;
+    margin-bottom: 10px;
+}
+ 
+/* Style for paragraph within the timeline content */
+.timeline-content p {
+    margin: 0;
+    line-height: 1.6;
+}
 
 
 
@@ -389,34 +399,39 @@ button:disabled {
     display: flex;
     flex-direction: column;
     align-items:center;
-    background-color: #333; /* Setting a background color for the footer */
+    /* background-color: #333; Setting a background color for the footer */
+        background-color: #f7f7f7;
+    background: linear-gradient(to right,
+                                #58097f 0%,      /* Dark purple on the left */
+                                #601f99 50%,     /* Light purple in the middle */
+                                #573c88 100%);   /* Very light color on the right */
     padding: 20px; /* Adding some padding for spacing */
 }
-
+ 
 /* Logo styling */
 .logo-section {
     display: flex;
     align-items: center; /* Align logo vertically centered */
     margin-bottom: 20px; /* Add spacing below the logo */
 }
-
+ 
 .logo {
     width: 150px; /* Adjust width as needed */
 }
-
+ 
 /* Navigation Section */
 .navigation {
     display: flex;
     gap: 100px; /* Add spacing between navigation items */
 }
-
-
-
+ 
+ 
 .nav-section p, .nav-section ul, .nav-section ul li, .nav-section ul li a {
     color: white; /* Set color of text and links to white */
     text-decoration: none; /* Remove underline */
+    font-size: large;
 }
-
+ 
 /* Social Links styling */
 .social-links {
     display: flex;
@@ -424,16 +439,21 @@ button:disabled {
     margin-top: 20px; /* Add spacing above the social links */
     align-items:flex-start;
 }
-
+ 
 .social-link img {
     width: 30px; /* Adjust size of social icons */
     height: 30px;
 }
-
+ 
 /* Copyright Section */
 .copyright-section {
     margin-top: 20px; /* Add spacing above the copyright section */
     color: white; /* Set color of copyright text to white */
+    font-size: larger;
+    font-weight: bolder;
+}
+.copyright-section a{
+    color:white;
 }
 
 

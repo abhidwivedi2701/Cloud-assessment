@@ -45,54 +45,66 @@
         </div>
     </div> -->
 
-    <div class="timeline">
-      <dl>
-          <dt>1</dt>
-          <dd>
-              <p><strong>Identify the business objectives for your migration to the cloud</strong></p>
-              <p>Before you can devise your cloud migration strategy, it is imperative to understand why you want to move to the cloud. If you do not have an appropriate clarification, then it’s like throwing darts in the dark.</p>
-          </dd>
-      </dl>
-  
-      <dl>
-          <dt>2</dt>
-          <dd>
-              <p><strong>Assess the potential of your team and identify the skill gaps</strong></p>
-              <p>The next vital step is to understand what your in-house IT team is capable of. Once you have the answers to the ambiguities above, it’s important to fill the skill and resource gaps quickly.</p>
-          </dd>
-      </dl>
-  
-      <dl>
-          <dt>3</dt>
-          <dd>
-              <p><strong>Scrutinize your current IT infrastructure</strong></p>
-              <p>This step takes the forefront of your cloud readiness assessment as it helps you understand the feasibility of your cloud migration initiative. It involves examining the applications that you want to move to the cloud along with gathering sufficient information on your storage, network, data collection, operating environment, and on-premise hardware.</p>
-          </dd>
-      </dl>
-  
-      <dl>
-          <dt>4</dt>
-          <dd>
-              <p><strong>Identify your security requirements</strong></p>
-              <p>Security has always been the first and foremost concern for many organizations that are contemplating migrating to the cloud. Therefore, it is essential for any organization that shifts to the cloud to assess their current security mechanisms and identify what their security and compliance needs are.</p>
-          </dd>
-      </dl>
-  
-      <dl>
-          <dt>5</dt>
-          <dd>
-              <p><strong>Assess your operational readiness</strong></p>
-              <p>Despite the advent of cutting-edge technologies and tools, cloud operations have always been a difficult challenge to deal with. In this step, you will determine how ready you are to manage the operational aspects of the cloud.</p>
-          </dd>
-      </dl>
-  
-      <dl>
-          <dt>6</dt>
-          <dd>
-              <p><strong>Determine the budget</strong></p>
-              <p>Many organizations decide to move their applications to the cloud for compelling reasons such as scalability, performance, resiliency, cost-cutting, etc. Without adequate planning, a cloud infrastructure can surpass the costs that your on-premise infrastructure incurs and also exceed the estimated timeline.</p>
-          </dd>
-      </dl>
+
+    
+
+
+    <div class="heading">
+      <h1>
+        Steps for Cloud Readiness Assessment :
+      </h1>
+    </div>
+ 
+ 
+  <div class="timeline">
+      <!-- Block 1 -->
+      <div class="timeline-block">
+        <div class="timeline-content">
+          <strong>Identify the business objectives for your migration to the cloud</strong>
+          <p>Before you can devise your cloud migration strategy, it is imperative to understand why you want to move to the cloud. If you do not have an appropriate clarification, then it’s like throwing darts in the dark.</p>
+        </div>
+      </div>
+    
+      <!-- Block 2 -->
+      <div class="timeline-block">
+        <div class="timeline-content">
+          <strong>Assess the potential of your team and identify the skill gaps</strong>
+          <p>The next vital step is to understand what your in-house IT team is capable of. Once you have the answers to the ambiguities above, it’s important to fill the skill and resource gaps quickly.</p>
+        </div>
+      </div>
+    
+      <!-- Block 3 -->
+      <div class="timeline-block">
+        <div class="timeline-content">
+          <strong>Scrutinize your current IT infrastructure</strong>
+          <p>This step takes the forefront of your cloud readiness assessment as it helps you understand the feasibility of your cloud migration initiative. It involves examining the applications that you want to move to the cloud along with gathering sufficient information on your storage, network, data collection, operating environment, and on-premise hardware.</p>
+        </div>
+      </div>
+    
+      <!-- Block 4 -->
+      <div class="timeline-block">
+        <div class="timeline-content">
+          <strong>Identify your security requirements</strong>
+          <p>Security has always been the first and foremost concern for many organizations that are contemplating migrating to the cloud. Therefore, it is essential for any organization that shifts to the cloud to assess their current security mechanisms and identify what their security and compliance needs are.</p>
+        </div>
+      </div>
+    
+      <!-- Block 5 -->
+      <div class="timeline-block">
+        <div class="timeline-content">
+          <strong>Assess your operational readiness</strong>
+          <p>Despite the advent of cutting-edge technologies and tools, cloud operations have always been a difficult challenge to deal with. In this step, you will determine how ready you are to manage the operational aspects of the cloud.</p>
+        </div>
+      </div>
+    
+      <!-- Block 6 -->
+      <div class="timeline-block">
+        <div class="timeline-content">
+          <strong>Determine the budget</strong>
+          <p>Many organizations decide to move their applications to the cloud for compelling reasons such as scalability, performance, resiliency, cost-cutting, etc. Without adequate planning, a cloud infrastructure can surpass the costs that your on-premise infrastructure incurs and also exceed the estimated timeline.</p>
+        </div>
+      </div>
+    
   </div>
   
 
@@ -939,24 +951,108 @@
         nextButton.disabled = true;
       }
 
-      function calculatePoints() {
-        let totalPoints = 0;
+//       function calculatePoints() {
+//         let totalPoints = 0;
 
-        for (let pillarIndex = 1; pillarIndex <= 6; pillarIndex++) {
-          for (let questionIndex = 1; questionIndex <= 5; questionIndex++) {
-            const questionName = `pillar${pillarIndex}_q${questionIndex}`;
-            const selectedOption = document.querySelector(
-              `select[name="${questionName}"]`
-            );
+//         for (let pillarIndex = 1; pillarIndex <= 6; pillarIndex++) {
+//           for (let questionIndex = 1; questionIndex <= 5; questionIndex++) {
+//             const questionName = `pillar${pillarIndex}_q${questionIndex}`;
+//             const selectedOption = document.querySelector(
+//               `select[name="${questionName}"]`
+//             );
 
-            if (selectedOption && selectedOption.value !== "choose") {
-              totalPoints += parseInt(selectedOption.value);
-            }
-          }
-        }
+//             if (selectedOption && selectedOption.value !== "choose") {
+//               totalPoints += parseInt(selectedOption.value);
+//             }
+//           }
+//         }
 
-        alert(`Total Points: ${totalPoints}`);
+//                // alert(`Total Points: ${totalPoints}`);
+//                if (totalPoints >= 0 && totalPoints <= 50) {
+//     alert(`Your Audit and Assessment score is : ${totalPoints} points. Poor score`);
+// } else if (totalPoints >= 50 && totalPoints <= 100) {
+//     alert(`Your Audit and Assessment score is : ${totalPoints} points. Good score`);
+// } else if (totalPoints > 100 && totalPoints <= 150) {
+//     alert(`Your Audit and Assessment score is : ${totalPoints} points. Excellent score`);
+// } else {
+//     alert(`Your Total Points: ${totalPoints}`);
+// }
+//       }
+//     </
+
+function calculatePoints() {
+  let totalPoints = 0;
+
+  // Your existing logic to calculate totalPoints
+  for (let pillarIndex = 1; pillarIndex <= 6; pillarIndex++) {
+    for (let questionIndex = 1; questionIndex <= 5; questionIndex++) {
+      const questionName = `pillar${pillarIndex}_q${questionIndex}`;
+      const selectedOption = document.querySelector(`select[name="${questionName}"]`);
+
+      if (selectedOption && selectedOption.value !== "choose") {
+        totalPoints += parseInt(selectedOption.value);
       }
-    </script>
+    }
+  }
+
+  // Create a custom popup with the score message and buttons
+  let message;
+if (totalPoints >= 0 && totalPoints <= 50) {
+  message = `Your Audit and Assessment score is: ${totalPoints} points. Poor score`;
+} else if (totalPoints >= 50 && totalPoints <= 100) {
+  message = `Your Audit and Assessment score is: ${totalPoints} points. Good score`;
+} else if (totalPoints > 100 && totalPoints <= 150) {
+  message = `Your Audit and Assessment score is: ${totalPoints} points. Excellent score`;
+} else {
+  message = `Your Total Points: ${totalPoints}`;
+}
+
+const popup = document.createElement('div');
+popup.className = 'custom-popup';
+popup.innerHTML = `
+  <p>${message}</p>
+  <div class="details-text">For more details : </div>
+  <div class="button-container">
+    <a href="https://staging.knoldus.com/" target="_blank"><button>Contact Us</button></a>
+    <button onclick="closePopup()">Close</button>
+  </div>
+`;
+
+document.body.appendChild(popup);
+}
+
+function closePopup() {
+const popup = document.querySelector('.custom-popup');
+if (popup) {
+  popup.remove();
+}
+}
+</script>
+<style>
+.custom-popup {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+padding: 30px;
+background-color: #f9f9f9;
+text-align: center; /* Center the text */
+}
+
+.custom-popup .details-text {
+text-align: left; /* Align text to the left */
+font-style: italic; /* Italicize the text */
+margin-bottom: 10px; /* Add margin for spacing */
+ color:rgb(108, 105, 105);
+}
+
+.custom-popup .button-container {
+margin-top: 20px; /* Add margin to create a gap */
+}
+
+.custom-popup .button-container button {
+margin: 0 10px; /* Add margin to create a gap */
+}
+</style>
 </body>
 </html>
